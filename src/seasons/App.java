@@ -9,12 +9,17 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Podaj nazwe pory roku");
+        String choice = getStringFromUser(sc);
+        System.out.println("Wybrano pore roku:");
+
+        System.out.println(Season.fromDescription(choice));
+
+    }
+
+    private static String getStringFromUser(Scanner sc) {
         for (Season s : Season.values()) {
             System.out.println(s.getDescription());
         }
-        String choice = sc.nextLine();
-        System.out.println("Wybrano pore roku:");
-        System.out.println(Season.fromDescription(choice));
-
+        return sc.nextLine();
     }
 }

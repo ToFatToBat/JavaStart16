@@ -21,15 +21,18 @@ public enum Season {
     }
 
     public static Season fromDescription(String description) throws IllegalArgumentException {
+        try {
 
-        Season[] seasons = values();
-        for (Season s : seasons) {
-            if (s.getDescription().equals(description))
-                return s;
+            Season[] seasons = values();
+            for (Season s : seasons) {
+                if (s.getDescription().equals(description))
+                    return s;
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Wprowadzono niewlasciwa pore roku");
         }
+
         return null;
     }
-
-
-
 }
+
