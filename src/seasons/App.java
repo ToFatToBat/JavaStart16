@@ -3,6 +3,8 @@ package seasons;
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
+import static seasons.Season.fromDescription;
+
 public class App {
     public static void main(String[] args) {
 
@@ -12,7 +14,9 @@ public class App {
         String choice = getStringFromUser(sc);
         System.out.println("Wybrano pore roku:");
 
-        System.out.println(Season.fromDescription(choice));
+
+        System.out.println(String.valueOf(fromDescription(choice)));
+       System.out.println(Months.monthsInSeason(fromDescription(choice)));
 
     }
 
