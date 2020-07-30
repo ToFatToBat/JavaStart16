@@ -1,5 +1,7 @@
 package seasons;
 
+
+
 public enum Season {
     SPRING("wiosna"),
     SUMMER("lato"),
